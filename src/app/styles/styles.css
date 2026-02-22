@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand */
+  --color-primary: #3d5b81;
+  --color-secondary: #ee6b4d;
+  --color-sky: #9bc0d9;
+  --color-surface: #dffbfc;
+  --color-ink: #293241;
+
+  /* Neutral scale */
+  --color-gray-50: #f8fafc;
+  --color-gray-100: #f1f5f9;
+  --color-gray-200: #e2e8f0;
+  --color-gray-300: #cbd5e1;
+  --color-gray-400: #94a3b8;
+  --color-gray-500: #64748b;
+  --color-gray-600: #475569;
+  --color-gray-700: #334155;
+  --color-gray-800: #1e293b;
+  --color-gray-900: #0f172a;
+
+  /* Semantic */
+  --color-success: #16a34a;
+  --color-warning: #d97706;
+  --color-error: #dc2626;
+  --color-info: #2563eb;
+
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "SF Pro Display",
+    "SF Pro Text", sans-serif;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+}

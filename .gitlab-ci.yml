@@ -1,0 +1,31 @@
+image: node:20
+
+stages:
+  - build
+  - deploy
+
+cache:
+  paths:
+    - node_modules/
+
+build_storybook:
+  stage: build
+  script:
+    - npm ci
+    - npm run build-storybook
+  artifacts:
+    paths:
+      - storybook-static
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
+
+pages:
+  stage: deploy
+  script:
+    - rm -rf public
+    - mv storybook-static public
+  artifacts:
+    paths:
+      - public
+  rules:
+    - if: $CI_COMMIT_BRANCH == "main"
